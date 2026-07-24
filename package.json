@@ -8,7 +8,7 @@
     "test": "jest --ci",
     "build": "mkdir -p dist && cp app.js dist/app.js"
   },
-  "author": "Adem Cemil YALCIN",
+  "author": "Bhagyalakshmi Anna",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
