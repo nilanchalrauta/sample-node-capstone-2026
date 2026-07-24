@@ -49,7 +49,7 @@ jobs:
     name: Build and Publish Docker Image
     needs: ci_test
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    uses: ./.github/workflows/shared-docker.yml
+    uses: ./.github/workflows/shared-docker.yaml
     with:
       image_name: ghcr.io/${{ github.repository }}
     secrets:
