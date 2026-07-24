@@ -48,7 +48,7 @@ jobs:
   publish_image:
     name: Build and Publish Docker Image
     needs: ci_test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     uses: ./.github/workflows/shared-docker.yaml
     with:
       image_name: ghcr.io/${{ github.repository }}
@@ -58,7 +58,7 @@ jobs:
   deploy_production:
     name: Deploy to Production
     needs: publish_image
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: Production
