@@ -51,7 +51,7 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     uses: ./.github/workflows/shared-docker.yaml
     with:
-      image_name: ghcr.io/${{ github.repository }}
+      image_name: ${{ vars.IMAGE_NAME }}
     secrets:
       registry_token: ${{ secrets.GITHUB_TOKEN }}
 
